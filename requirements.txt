@@ -1,0 +1,14 @@
+pymupdf
+pytesseract
+pillow
+pypdf
+rank_bm25
+nltk
+python-dotenv
+langchain-text-splitters
+langchain-community
+langchain-huggingface
+langchain-groq
+langchain-classic
+faiss-cpu
+sentence-transformers
