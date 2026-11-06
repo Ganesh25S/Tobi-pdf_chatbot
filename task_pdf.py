@@ -116,8 +116,6 @@ rag_chain = (
     | StrOutputParser()
 )
 
-answer = rag_chain.invoke(input("what is your question"))
-print(answer)
 
 while True:
     question = input("Ask a question (or type 'quit' to stop): ").strip()
