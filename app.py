@@ -29,7 +29,12 @@ pdf_bytes = uploaded.getvalue()
 file_hash = hashlib.md5(pdf_bytes).hexdigest()
 file = uploaded.name
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+import platform
+
+if platform.system() == "Windows":
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# On Linux (Streamlit Cloud) Tesseract is found automatically from packages.txt
+
 
 # ---------------- BUILD INDEX (runs only once per PDF) ----------------
 if st.session_state.get("file_hash") != file_hash:
